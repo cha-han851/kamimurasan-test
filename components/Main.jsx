@@ -13,7 +13,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
     });
   };
   console.log(activeNote);
-  if (!activeNote) {
+  if (activeNote == undefined) {
     return <div className="no-active-note">ノートが選択されていません</div>
   }
   // e.target.valueは、inputに入力する文字列
