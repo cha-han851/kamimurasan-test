@@ -12,7 +12,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
       modDate: Date.now(),
     });
   };
-
+  console.log(activeNote);
   if (!activeNote) {
     return <div className="no-active-note">ノートが選択されていません</div>
   }
@@ -26,8 +26,8 @@ const Main = ({ activeNote, onUpdateNote }) => {
         value={activeNote.title}
         onChange={(e) => onEditNote("title", e.target.value)}
         />
-        <textarea 
-        id="content" 
+        <textarea
+        id="content"
         placeholder='ノート内容を記入'
         value={activeNote.content}
         onChange={(e) => onEditNote("content", e.target.value)}
